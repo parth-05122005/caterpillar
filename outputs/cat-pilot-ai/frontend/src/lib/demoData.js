@@ -1,0 +1,50 @@
+export const demoState = {
+  dashboard: {
+    machine_id: 'CAT 349 EXCAVATOR',
+    status: 'ACTIVE',
+    eco_score: 92,
+    current_task: {
+      task_id: 'T-042',
+      task_type: 'Trenching',
+      sector: 'North Cut · Sector 4',
+      weather: 'Cloudy · 27°C',
+      progress_pct: 68,
+      eta_min: 18,
+      estimated_min: 52,
+      predicted_min: 55,
+    },
+    next_task: { task_id: 'T-043', task_type: 'Material Loading', eta_min: 36 },
+  },
+  telemetry: {
+    timestamp: new Date().toISOString(),
+    engine_hours: 1877.8,
+    fuel_used_L: 6.52,
+    load_cycles: 12,
+    idling_time_min: 8.4,
+    hydraulic_temp_c: 74,
+    engine_rpm: 1760,
+    pressure_bar: 281,
+    seatbelt_status: 'Fastened',
+  },
+  safety: {
+    seatbelt: { status: 'fastened', confidence: 1 },
+    phone_usage: { detected: false, confidence: 0.96 },
+    drowsiness: { detected: false, ear_score: 0.29 },
+    proximity: { hazard: false, zone: 'rear' },
+    active_alert: null,
+    events: [
+      { id: 1, time: '09:42', type: 'Rear zone cleared', severity: 'safe' },
+      { id: 2, time: '09:18', type: 'Seatbelt restored', severity: 'safe' },
+      { id: 3, time: '08:56', type: 'Proximity warning', severity: 'warning' },
+    ],
+  },
+  unusual_behavior: {
+    prediction: 'normal',
+    confidence: 0.94,
+    risk_drivers: ['Idle time within target', 'Seatbelt fastened'],
+  },
+  incidents: [
+    { id: 'INC-208', time: 'Today · 08:56', severity: 'warning', type: 'Rear proximity', machine: 'CAT 349' },
+    { id: 'INC-204', time: 'Yesterday · 14:22', severity: 'critical', type: 'Drowsiness', machine: 'CAT 349' },
+  ],
+};

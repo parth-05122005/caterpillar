@@ -1,0 +1,7 @@
+{
+  "task_time_r2": 0.9598,
+  "task_time_mae_min": 3.4814,
+  "unusual_behavior_f1": 1.0,
+  "task_rows": 3000,
+  "operator_rows": 3000
+}

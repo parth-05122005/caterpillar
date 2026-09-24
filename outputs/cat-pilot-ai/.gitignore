@@ -1,0 +1,10 @@
+frontend/.npm-cache/
+frontend/node_modules/
+frontend/dist/
+.venv/
+.venv-*/
+.python-packages/
+.pip-cache/
+work-tmp/
+frontend/.env.local
+firebase-service-account*.json
